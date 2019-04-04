@@ -32,11 +32,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp
+        testsystem/main.cpp \
+        testsystem/mainwindow.cpp
 
 HEADERS += \
-        mainwindow.h
+        testsystem/mainwindow.h
 
 FORMS += \
-        mainwindow.ui
+        testsystem/mainwindow.ui
