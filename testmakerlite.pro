@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-04-02T20:21:22
+# TestMaker Lite QMake project
 #
 #-------------------------------------------------
 
@@ -8,13 +8,15 @@ TESTMAKERLITE_VERSION_MAJOR = 1
 TESTMAKERLITE_VERSION_MINOR = 6
 TESTMAKERLITE_VERSION_UPDATE = 0
 
-QT       += core gui network
-
 DEFINES += TESTMAKERLITE_VERSION_MAJOR=$$TESTMAKERLITE_VERSION_MAJOR
 DEFINES += TESTMAKERLITE_VERSION_MINOR=$$TESTMAKERLITE_VERSION_MINOR
 DEFINES += TESTMAKERLITE_VERSION_UPDATE=$$TESTMAKERLITE_VERSION_UPDATE
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+!greaterThan(QT_MAJOR_VERSION, 4) {
+	error("TestMaker Lite does not support Qt 4.8 and earlier.")
+}
+
+QT       += core gui network widgets
 
 TARGET = testmakerlite
 TEMPLATE = app
