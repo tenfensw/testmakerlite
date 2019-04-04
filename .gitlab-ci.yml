@@ -7,5 +7,5 @@ before_script:
 
 build-qt5.9:
   script:
-    - /usr/bin/qmake-qt5 -r
+    - /usr/lib64/qt5/bin/qmake -r
     - make
